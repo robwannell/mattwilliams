@@ -40,7 +40,7 @@
 	<li class="nav-item nav-link dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Join Matt<span class="caret"></span></a>
 	          <ul class="dropdown-menu drops" role="menu">
-	            <li class="droppy"><%= link_to 'Support Matt', '#' %></li>
+	            <li class="droppy"><%= link_to 'Support Matt', support_path %></li>
 				 <li class="droppy"><%= link_to 'Calendar of Events', events_url %></li>
 				 
 	            
@@ -51,7 +51,7 @@
 	        </li>
 	  
       <li class="nav-item">
-        <%= link_to 'Contact', '#', class:"nav-link"%>
+        <%= link_to 'Contact', contact_url, class:"nav-link"%>
       </li>
 	  
       <li class="nav-item">
@@ -72,6 +72,19 @@
 	
     <div class="container">
 		<div class="page-frame">
+			
+			<% if notice %>
+			<div class="notices">
+			  <h2 class="alert alert-success"><%= notice %></h2>
+			</div>
+			<% end %>
+			<% if alert %>
+			<div class="notices">
+			  <h2 class="alert alert-danger"><%= alert %></h2>
+			</div>
+			<% end %>
+			
+			
 			<%= yield :override %>
 			<div class="row">
 				<div class="col-sm-8">
@@ -100,6 +113,12 @@
 	
    
   </body>
+  
+  <script>
+  $(".notices" ).fadeOut(3000);
+  </script>
+  
+  
 </html>
 
 

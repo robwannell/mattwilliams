@@ -1,0 +1,37 @@
+
+
+<DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   <body>
+       <p>The following is a message sent via matt4davis.com from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %></p>
+	<p>
+  
+        
+		<% if @name %>
+		<p>Name: <%= @name %></p>
+		<% end %>
+		
+		<% if @phone %>
+		<p>Phone: <%= @phone %></p>
+		<% end %>
+		
+		<% if @address %>
+		<p>Address: <%= @address %></p>
+		<% end %>
+		
+		<% if @body %>
+		<p>Message: <%= @body %></p>
+		<% end %>
+		
+		<% unless @help.blank? %><p>I would like to: </p><% end %>
+		<% unless @help.blank? %><% @help.each do |help|%>
+		<p><%= help %></p>
+		<% end%>
+		<% end %>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+You have received the following email from <%= "#{ @name } (#{ @email }):" %>
+
+		<% if @name %>
+		Name: <%= "#{@name}" %>
+		<% end %>
+		
+		<% if @phone %>
+		Phone: <%= "#{@phone}" %>
+		<% end %>
+		
+		<% if @address %>
+		Address: <%= "#{@address}" %>
+		<% end %>
+		
+		<% if @body %>
+		Message: <%= "#{@body}" %>
+		<% end %>
+		
+		
+		<% unless @help.blank? %><p>I would like to:<% end %>
+		<% unless @help.blank? %><% @help.each do |help|%>
+		<%= help %>
+		<% end%>
+		<% end %>

@@ -1,0 +1,18 @@
+
+
+<h1>Mailer Recipients</h1>
+<p class="lead">This site has two mailers - the <strong>Support</strong> form and the <strong>Contact</strong> form. You can change the recipient of each mailer here.</p>
+    <% @mail_recipients.each do |mail_recipient| %>
+      <div class="receptionist">
+		 <h3> <%= mail_recipient.mailer %></h3>
+		<p> <b>Recipient: </b><%= mail_recipient.name %><br/>
+	  <b>Email: </b><%= mail_recipient.email %>
+	   <%= link_to 'Edit', edit_mail_recipient_path(mail_recipient), class: "btn admin-edit reception-edit pull-right" %>
+  </div>
+	 
+       
+    
+    <% end %>
+  
+
+<% if current_user.id == 1 %> || <%= link_to 'New Mail recipient', new_mail_recipient_path %> ||<% end %>

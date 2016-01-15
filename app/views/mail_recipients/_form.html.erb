@@ -1,0 +1,25 @@
+
+
+<h1><%= @mail_recipient.mailer %></h1>
+
+<%= bootstrap_form_for(@mail_recipient) do |f| %>
+
+  
+
+  <div class="field">
+   
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email %>
+  </div>
+  <% if current_user.id == 1 %>
+  <div class="field">
+    
+    <%= f.text_field :mailer, label: "Mailer name - only super-admin can change this" %>
+  </div>
+  <% end %>
+  <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@event) do |f| %>
+<%= bootstrap_form_for(@event, :html => { :multipart => true }) do |f| %>
  
 
   <div class="field">
@@ -9,10 +9,32 @@
    
     <%= f.text_field :location %>
   </div>
+  
+  <div class="field">
+  
+   <% unless @event.avatar.blank? %>
+   <p><b>Current image</b><br/><%= link_to (image_tag @event.avatar.url(:thumb)), @event.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+   <% else %>
+ 
+   <%= f.file_field :avatar, label: 'Add an image for this issue - ', class: 'choose-image'%>
+
+   <% end %>
+   </div>
+   
+   
   <div class="field">
    
     <%= f.datetime_select :start_time %>
   </div>
+  
+  
+  <div class="field">
+    
+    <%= f.text_area :content, class: 'edit-content' %>
+  </div>
+  
+  
+  
   <div class="actions pull-right">
     <%= f.submit %>
   </div>

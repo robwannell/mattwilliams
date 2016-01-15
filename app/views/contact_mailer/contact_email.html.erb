@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>The following is a message sent via matt4davis.com from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %></p>
+		<p>
+        <p><%= @body %></p>
+    </body>
+</html>

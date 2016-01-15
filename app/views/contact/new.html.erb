@@ -1,0 +1,29 @@
+<h1>Contact Us</h1>
+
+<p class="lead">Use this form to send us a message, and we'll do our best to respond to you promptly.	</p>
+
+
+   
+	<%= bootstrap_form_for @contact, url: {:action=>'create'} do |f| %>
+
+	  <%= f.text_field :name %>
+
+	  <%= f.email_field :email %>
+
+  	
+		
+	  <%= f.text_area :body, label: 'Message', placeholder: 'Your message', class: "message-field" %>
+
+  	
+		
+	  <%= f.submit 'Submit', class: 'btn btn-default btn-about pull-right'%>
+ 
+
+	<% end %>
+	
+	<% content_for :rh do %>
+	
+	<h3>Contact Us</h3>
+	<p>Bricks 'n mortar contact details here</p>
+	
+	<% end %>

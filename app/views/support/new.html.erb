@@ -1,0 +1,39 @@
+ <h1>Support Matt</h1>
+ 
+ <p class="lead">Our grassroots campaign depends on great volunteers! Please complete this short form and we will contact you about how you can help us reach the finish line strong.</p>
+
+
+ <%= bootstrap_form_for @support, url: {:action=>'create'} do |f| %>
+    
+	<%= f.text_field :name, placeholder: 'Your name' %>
+	<%= f.email_field :email, placeholder: 'name@example.com' %>
+	<%= f.text_field :phone, placeholder: '916 555 0070' %>
+	<%= f.text_field :address, placeholder: 'Optional' %>
+	
+	
+	
+
+	
+		   
+		   
+		   <%= f.form_group :help, label: { text: "I would like to (please check all that apply):" } do %><br/>
+		    
+			<% @help.each do |item| %>
+			<div class="checkbox" style="margin-left:20px"><%= check_box_tag "help[]", item %> <%= item %></div>
+			 
+		   <% end %>
+		    <% end %>
+		
+		 <%= f.text_area :comments, placeholder: 'Anything we should know?', class: "message-field" %>
+		
+		 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
+	  
+	  
+	<% end %>
+	
+<% content_for :rh do %>
+				<h3>Support</h3>
+				
+				
+				
+<% end %>
