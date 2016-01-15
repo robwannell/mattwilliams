@@ -6,6 +6,3 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Page.create(title: 'Welcome', content: 'content here')
-Page.create(title: 'About', content: 'content here')
-Page.create(title: 'Endorsements', content: 'content here')

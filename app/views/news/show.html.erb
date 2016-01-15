@@ -1,6 +1,7 @@
  	
 
 <h1> <%= @news.title %></h1>
+ <h6 class="text-muted"><%= @news.updated_at.strftime("%B %d %Y")%></h6> 
  	<% if current_user %>
  	<div class="edit alert" >
  <i> <%= link_to ' Edit ', edit_news_path(@news), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
@@ -61,11 +62,11 @@
 <div >
 	
 	
-		<%= image_tag i.avatar.url(:thumb), class: "issue-img-sml"%>
+		
 		
 <h5><%= link_to i.title, i %></h5>
-
- <p><%= link_to 'Read more', i %></p>
+<h6 class="text-muted"><%= @news.updated_at.strftime("%B %d %Y")%></h6> 
+ <p><%= i.leader %> <%= link_to '..read more', i %></p>
 
 </div>
 <% end %>
