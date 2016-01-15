@@ -1,0 +1,19 @@
+<%= bootstrap_form_for(@event) do |f| %>
+ 
+
+  <div class="field">
+   
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+   
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+   
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>

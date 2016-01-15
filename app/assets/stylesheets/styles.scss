@@ -64,6 +64,7 @@ body {
 	
 }
 
+
 .navbar {
   border-radius: 0 !important;
   
@@ -113,6 +114,23 @@ body {
 }
 .navbar a:hover {
 	color:#FB9A3B;
+}
+
+.droppy {
+ padding:5px 0;
+ 
+}
+
+.droppy a {
+ color:#153C5B;
+}
+.droppy:hover {
+	background-color:#eee;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+background-color:#efefef;
 }
 
 .contribute {
@@ -214,4 +232,119 @@ body {
  	color:#aaa;
 	
  }
+ 
+ .rails-bootstrap-forms-date-select,
+ .rails-bootstrap-forms-time-select,
+ .rails-bootstrap-forms-datetime-select {
+   select {
+     display: inline-block;
+     width: auto;
+   }
+ }
+ .rails-bootstrap-forms-error-summary {
+   margin-top: 10px;
+ }
+
+ .simple-calendar {
+ 	font-size:1.3em;
+ }
+ .calendar {
+  padding-bottom:30px;
+ } 
+
+  .simple-calendar {
+  	 text-align:center;
+  }
+ 
+  .simple-calendar a{
+  	 color:#FB9A3B;
+ 	 font-size:0.7em;
+  }
+  .calendar-header {
+   text-align:center;
+   font-size: 2.8em;
+   padding:10px;
+   margin-bottom:20px;
+   border:1px solid red;
+  }
+  .calendar-header a{
+   padding: 0 10px;
+  }
+ 
+  .calendar th{
+   color:#333;
+   text-align:center;
+  }
+ 
+  .current-month {
+ 	 background-color: #F8FBFF;
+  }
+  .calendar td {
+   border:5px solid #fff;
+   color:#333;
+   vertical-align: top;
+   text-align:center;
+   width: 120px;
+   height: 150px;
+   padding:10px;
+ 
+  }
+ 
+  .calendar td a{
+   color:#FB9A3B;
+   font-size:0.8em;
+  
+  }
+ 
+  .day {
+  }
+ 
+
+  .past {
+   background-color: #F8FBFF;
+  }
+ 
+  .wday-6, .wday-0{
+   background-color: #FFF3E1;
+  }
+ 
+  td.today {
+   color: #ff6600;
+   background-color: #FBEBEB;
+  
+  }
+ 
+  .next-month, .prev-month {
+   background-color: #F4F9F9;
+  }
+ 
+  .event-details {
+ 	 padding:20px;
+	 
+  }
+ 
+  .event-location {
+ 	 font-size:0.9em;
+ 	 font-weight:normal;
+  }
+ 
+  .event-details h2,h3{
+  }
+ 
+  .event-details h3{
+ 	 color:#FB9A3B;
+  }
+ 
+  .event-img {
+ 	 padding:20px 0px;
+	
+ 	 margin-bottom:30px;
+  }
+ 
+  .eventlist {
+ 	 border-top:1px solid #eee;
+ 	 margin: 20px 0 30px;
+ 	 padding-top:10px;
+  }
+ 
  

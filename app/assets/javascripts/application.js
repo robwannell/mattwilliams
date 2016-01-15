@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require tether
+//= require moment
+//= require bootstrap-datetimepicker
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks

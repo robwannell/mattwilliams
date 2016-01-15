@@ -30,6 +30,10 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'will_paginate', '~> 3.0.6'
 
+gem "simple_calendar", "~> 2.0"
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'sprockets-rails', '>= 2.3.2'
 gem 'bootstrap_form'

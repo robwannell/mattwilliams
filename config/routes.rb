@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
  
+  resources :events
   resources :news
   resources :endorsements
   get 'about' => 'about#index'

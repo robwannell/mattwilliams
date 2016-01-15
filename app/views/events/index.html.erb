@@ -1,0 +1,37 @@
+<h1>Events Calendar</h1>
+<p>Click on an event in the calendar for more info.
+	
+
+	
+		<div class="calendar">
+		
+    
+	
+		<%= month_calendar events: @events do |date, events| %>
+	
+   
+	
+		  <%= date.strftime("%d") %>
+
+		  <% events.each do |event| %>
+		    <div>
+		      <%= link_to truncate(event.name, length: 20), event, class: "tag-tooltip",
+	                    :data => {:toggle=>"tooltip"},
+	                    'data-original-title' => event.name %>
+		    </div>
+		  <% end %>
+		<% end %>
+	
+	</div>
+
+<%= content_for :rh do %>
+<%= render '/layouts/upcoming_events.html.erb'%>
+
+<% end %>
+
+
+<script>
+$(document).on("ready page:change", function() {
+    $('.tag-tooltip').tooltip();
+});
+</script>
