@@ -1,0 +1,73 @@
+ 	
+
+<h1> <%= @news.title %></h1>
+ 	<% if current_user %>
+ 	<div class="edit alert" >
+ <i> <%= link_to ' Edit ', edit_news_path(@news), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
+ 
+ <button class="close" data-dismiss="alert" type="button">
+     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+   </button>
+   
+ </div>
+<% end %>
+ <% if @news.avatar.blank? %>
+ 
+	
+	
+ <% else %>
+<div class="news-img">
+ <%= image_tag @news.avatar.url(:medium), class:"img-fluid"%>
+</div>
+ <% end%>
+ 
+
+ 
+ 
+
+<p class="lead">
+
+  <%= @news.leader %>
+
+
+<p>
+ 
+  <%= simple_format(@news.content) %>
+</p>
+
+ 
+
+
+	
+
+<div class="clear"></div>
+<%= link_to 'Back', news_index_path %>
+
+<%= content_for :rh do %>
+
+<% if current_user %><div class="edit alert" >
+ <i> <%= link_to ' Add a new story  ', new_news_path, class: "admin-edit fa fa-plus", dismissible: true %> </i>
+ 
+ <button class="close" data-dismiss="alert" type="button">
+     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+   </button>
+   
+ </div>
+ <% end %>
+ 
+ 
+<% @stories.each do |i| %>
+ <% unless i == @news %>
+<div >
+	
+	
+		<%= image_tag i.avatar.url(:thumb), class: "issue-img-sml"%>
+		
+<h5><%= link_to i.title, i %></h5>
+
+ <p><%= link_to 'Read more', i %></p>
+
+</div>
+<% end %>
+<% end %><% end %>
+

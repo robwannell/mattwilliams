@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @endorsement.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @endorsement.lastname %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @endorsement.category %>
+</p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @endorsement.ranking %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @endorsement.title %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @endorsement.organization %>
+</p>
+
+<%= link_to 'Edit', edit_endorsement_path(@endorsement) %> |
+<%= link_to 'Back', endorsements_path %>

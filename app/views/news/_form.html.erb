@@ -1,0 +1,42 @@
+<%= bootstrap_form_for(@news) do |f| %>
+  
+  <div class="field">
+   
+    <%= f.text_field :title %>
+	
+  	  <% unless @news.avatar.blank? %>
+  	  <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+  	  <% else %>
+  	  <div class="field">
+  	  <%= f.file_field :avatar, label: 'Add an image for this story - ', class: 'choose-image'%>
+    </div>
+  	  <% end %>
+	  
+  </div>
+  <div class="field">
+  
+    <%= f.text_area :leader, maxlength: "200", id: "alloptions"%>
+  </div>
+  <div class="field">
+   
+    <%= f.text_area :content, class: "edit-content"%>
+  </div>
+   <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+$(document).ready(function(){
+$('textarea#alloptions').maxlength({
+alwaysShow: true,
+threshold: 10,
+	showCharsTyped: false,
+warningClass: "label label-success",
+limitReachedClass: "label label-important label-danger",
+separator: ' of ',
+preText: 'You have ',
+postText: ' characters remaining.'
+});
+});
+</script>

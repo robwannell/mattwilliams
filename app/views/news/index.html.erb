@@ -1,0 +1,27 @@
+<h1>Latest News Stories</h1>
+
+    <% @news.each do |news| %>
+ <div class="row news-index">
+     <div class="col-md-3 news-img-index"> <%= image_tag news.avatar.url(:thumb)%>  </div> 
+      <div class="col-md-9 news-teaser"><h3>  <%= news.title %> </h3>
+		 <small class="text-muted"><%= news.updated_at.strftime("%B %d %Y")%></small> 
+    <p><%= news.leader %> <small><%=     
+    link_to "read more", news 
+ %></small><br/>
+</p>
+ 
+      </div>
+		
+		
+		  </div>
+		  
+		 
+		  
+		  
+    <% end %>
+	<div class="pagination">
+  <%= will_paginate @news %>
+</div>
+<br>
+
+

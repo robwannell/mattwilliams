@@ -1,29 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pages</h1>
+<h1>Editable Pages</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<p class="lead">The following pages are editable by admin. Keep it simple, and avoid using HTML which could cause breakage.</p>
+<p class="lead">Allowed tags: H, b, i, a href, and ul / li
     <% @pages.each do |page| %>
-      <tr>
-        <td><%= page.title %></td>
-        <td><%= page.content %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+	<div class="pages">
+      <h3><%= page.title %></h3>
+       
+	   <%= simple_format (truncate(page.content, length: 200))%>
+       
+        <%= link_to 'Edit', edit_page_path(page) %> <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
+ 
 <%= link_to 'New Page', new_page_path %>

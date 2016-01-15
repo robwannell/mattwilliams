@@ -1,8 +1,9 @@
 class WelcomeController < ApplicationController
   
-   before_filter :authorize
+   
    
    
   def index
+    @content = Page.find(1)
   end
 end

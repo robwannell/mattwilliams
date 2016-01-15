@@ -23,12 +23,30 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bh', '~> 1.2'
+
+gem "paperclip", "~> 4.3"
+gem 'friendly_id', '~> 5.1.0'
+
+gem 'will_paginate', '~> 3.0.6'
+
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'sprockets-rails', '>= 2.3.2'
+gem 'bootstrap_form'
+
+gem 'font-awesome-sass'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
+
 gem 'capistrano', '~> 3.1.0'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 
 # Add this if you're using rbenv
- gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 
 # Use ActiveModel has_secure_password
