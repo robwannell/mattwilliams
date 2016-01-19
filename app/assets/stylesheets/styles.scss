@@ -494,7 +494,7 @@ a.contribute:hover {
 	  color:#333;
 	  border-bottom:1px solid #E0ECF6;
 	  margin:20px 0 10px;
-	  padding-bottom:5px;
+	  padding-bottom:10px;
 	  
   }
   
@@ -502,4 +502,32 @@ a.contribute:hover {
 	  color:#aaa;
 	  font-size:.8em;
 	  margin:0;
+  }
+  
+  .tenets {
+	  padding:10px;
+  }
+  .tenets h4 {
+	  color:#333;
+	  border-bottom:1px solid #E0ECF6;
+	  margin:20px 0 10px;
+	  padding-bottom:10px;
+	  
+  }
+  
+  .tenets ul{
+	  
+	 
+  }
+  .tenets li {
+	  font-size:1em;
+	  font-weight:bold;
+	  
+	  list-style:none;
+	  padding-bottom:10px;
+  }
+  
+  .fa-li {
+	  margin:3px 0 0;
+	  color:green;
   }
