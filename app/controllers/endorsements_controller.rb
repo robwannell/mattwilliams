@@ -1,6 +1,6 @@
 class EndorsementsController < ApplicationController
   before_action :set_endorsement, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authorize, except: [:index ]
   # GET /endorsements
   # GET /endorsements.json
   def index
@@ -8,6 +8,7 @@ class EndorsementsController < ApplicationController
     @electeds = Endorsement.where(category: 'Elected') 
     @orgs = Endorsement.where(category: 'Organization')
     @individuals = Endorsement.where(category: 'Community Leader')
+     @news = News.first
   end
 
   # GET /endorsements/1
