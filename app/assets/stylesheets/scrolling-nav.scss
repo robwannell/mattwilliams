@@ -10,15 +10,18 @@
 		  background-color:#fff;
 		  background-size: 100% 100%;
 		  width: 100%;
-		  padding:0px 0 10px;
+		  padding:0px 0 0px;
  
 		}
 		.cta  {
 			font-size:.8em;
-	
-	
 		}
-	
+		.navbar {
+			padding-top:0;
+		}
+		.navbar img {
+			padding-top:10px;
+		}
 }
 @media (max-width: 991px) {
 	
@@ -43,7 +46,7 @@
 		margin-top:10px;
 	}
 	.navbar{
-		padding:5px 0 20px;
+		padding:10px 0 10px;
 		font-size: 1em;
 		
 		
