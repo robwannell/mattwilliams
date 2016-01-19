@@ -3,15 +3,16 @@
   <div class="field">
    
     <%= f.text_field :title %>
-	
+	 
   	  <% unless @news.avatar.blank? %>
   	  <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
   	  <% else %>
   	  <div class="field">
+		 
   	  <%= f.file_field :avatar, label: 'Add an image for this story - ', class: 'choose-image'%>
     </div>
   	  <% end %>
-	  
+	  <p class="warning">Max file size for image uploads is 2MB</p>
   </div>
   <div class="field">
   
