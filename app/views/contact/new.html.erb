@@ -12,11 +12,21 @@
 
   	
 		
-	  <%= f.text_area :body, label: 'Message', placeholder: 'Your message', class: "message-field" %>
-
-  	
+	  <%= f.text_area :body, label: 'Message', placeholder: 'Your message', class: "comment-section" %>
+		  
+		  <h5>We need your help - please check any that apply</h5>
+		  
+		   <%= f.form_group :help do %><br/>
+		    
+			<% @help.each do |item| %>
+			<div class="checkbox" style="margin-left:20px"><%= check_box_tag "help[]", item %> <%= item %></div>
+			 
+		   <% end %>
+		    <% end %>
 		
-	  <%= f.submit 'Submit', class: 'btn btn-default btn-about pull-right'%>
+		
+		
+		 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
  
 
 	<% end %>

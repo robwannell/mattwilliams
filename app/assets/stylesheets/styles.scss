@@ -554,3 +554,21 @@ a.contribute:hover {
  .warning {
 	 color: #C80506;
  }
+ 
+ .comment-section {
+	 height: 200px;
+ }
+ 
+ .has-error {
+ 	color:#C80506;
+ 	padding:5px;
+ 	
+ }
+ .has-error input {
+ 	
+	border:1px solid #C80506;
+ }
+ .has-error textarea {
+ 	
+	border:1px solid #C80506;
+ }
