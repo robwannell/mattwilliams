@@ -4,10 +4,11 @@ class ContactMailer < ActionMailer::Base
  
   
  
-    def contact_email(name, email, body, recip)
+    def contact_email(name, email, body, recip, help)
         @name = name
         @email = email
         @body = body
+        @help = help
         
         mail(subject: 'Contact message', reply_to: email, to: recip)
     end

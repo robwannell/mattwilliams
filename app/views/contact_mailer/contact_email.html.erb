@@ -9,5 +9,11 @@
         <p>The following is a message sent via matt4davis.com from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %></p>
 		<p>
         <p><%= @body %></p>
+		
+		<% unless @help.blank? %><p>I would like to: </p><% end %>
+		<% unless @help.blank? %><% @help.each do |help|%>
+		<p><%= help %></p>
+		<% end%>
+		<% end %>
     </body>
 </html>

@@ -1,3 +1,10 @@
 The following is a message sent via the website from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %>
 
  <%= @body %>
+
+
+<% unless @help.blank? %><p>I would like to: </p><% end %>
+<% unless @help.blank? %><% @help.each do |help|%>
+<p><%= help %></p>
+<% end%>
+<% end %>
