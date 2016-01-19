@@ -148,7 +148,7 @@ h4 {
 }
 
 .navbar {
-	font-size:1.1em;
+	font-size:1em;
 	padding:10px 0;
 	margin-bottom:0px;
 	text-transform: uppercase;
@@ -481,4 +481,25 @@ a.contribute:hover {
   .ltd img{
 	  margin:10px 0 0px;
   }
+  
+  li.about {
+	 padding:0;
+	 margin:0;
+  }
  
+  .news {
+	  padding:10px;
+  }
+  .news h4 {
+	  color:#333;
+	  border-bottom:1px solid #E0ECF6;
+	  margin:20px 0 10px;
+	  padding-bottom:5px;
+	  
+  }
+  
+  .news-date {
+	  color:#aaa;
+	  font-size:.8em;
+	  margin:0;
+  }

@@ -8,7 +8,7 @@
     </div>
 <% end %>
 
-<h1><%= @content.title %></h1>
+
 
 
 <div class="welcome-text"> <%= simple_format @content.content %></div>
@@ -26,4 +26,6 @@
 
 <% content_for :rh do %>
 <%= render '/layouts/ltd.html.erb'%>
+<%= render '/layouts/news.html.erb'%>
+<%= render '/layouts/support.html.erb'%>
 <% end %>

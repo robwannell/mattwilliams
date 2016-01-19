@@ -1,0 +1,11 @@
+<div class="news">
+	<h4>Latest News/Views</h4>
+	<% unless @news.blank? %>
+	
+	<h5><%= link_to @news.title, @news  %></h5>
+	<p class="news-date"><%= @news.created_at.strftime("%B %d %Y") %></p>
+	<p><%= @news.leader %><%= link_to '..read more..', @news %>
+	<% end %>
+	
+</div>
+
