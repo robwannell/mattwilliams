@@ -13,6 +13,24 @@ h3 {
 h4 {
 	color:#333;
 }
+
+.login {
+	padding:20px;
+	width: 300px;
+	margin:0px auto;
+	margin-bottom:40px;
+	background-color:#efefef;
+}
+
+.login-field input{
+	width:100%;
+}
+
+.login-button {
+	text-align: right;
+	margin-top:30px;
+}
+
 .page {
 	background-color: #f8f8f8;
 	padding:20px 0;
@@ -180,7 +198,7 @@ display: block;
 
 a.contribute {
 	background-color:#0572C8;
-	font-size:1.1em;
+	font-size:1em;
 	color:#FCEE21;
 }
 
@@ -531,3 +549,7 @@ a.contribute:hover {
 	  margin:3px 0 0;
 	  color:green;
   }
+  
+ .warning {
+	 color: #C80506;
+ }

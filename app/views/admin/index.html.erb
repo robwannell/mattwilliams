@@ -1,8 +1,22 @@
 <h1>Admin#index</h1>
 <p>Find me in app/views/admin/index.html.erb</p>
-
-<p> <%= link_to 'pages', pages_path, class:"nav-link"%>
-	
-	<p><%= link_to 'New News', new_news_path %>
+<h4>Manage News</h4>
+<p class="lead">Add or manage the news stories here. 
+	<p><%= link_to 'All News', news_index_path, class:"btn btn-primary"%>  <%= link_to 'New News', new_news_path, class:"btn btn-primary"%>
 		
-		<p><%= link_to 'Mailer Recipients', mail_recipients_path %>
+		
+<h4>Manage Endorsements</h4>	
+<p class="lead">Add or manage the endorsements as they come in here. 
+	<p><%= link_to 'Endorsements Page', endorsements_path, class:"btn btn-primary"%>  <%= link_to 'NewEndorsement', new_endorsement_path, class:"btn btn-primary"%>
+		
+		
+<h4>Manage Page Copy</h4>			
+
+<p class="lead">The copy in the main section of 'welcome', 'about' and 'endorsments' can be edited here</p>
+<p class="warning"><strong>CAUTION - Undesired results may occur if you're not careful. They can not be undone!</strong></p> 
+	<p><%= link_to 'pages', pages_path, class:"btn btn-primary" %></p>
+	
+	
+<h4>Mailer Recipients</h4>
+<p class="lead">The recipient of email forms can be managed here.
+		<p><%= link_to 'Mailer Recipients', mail_recipients_path, class:"btn btn-primary" %>

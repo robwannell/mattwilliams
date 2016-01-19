@@ -1,11 +1,28 @@
-<!-- app/views/sessions/new.html.erb -->
+<% content_for :login do %>
+	<div class="card login">
+	<h2>Login</h2>
 
-<h1>Login</h1>
+<%= bootstrap_form_for '/login' do |f| %>
+ <fieldset class="form-group">
+  Email:
+  <div class="controls login-field">
+	  <%= text_field_tag :email %>
+  </div>	
+  
+</fieldset>
 
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-
+ <fieldset class="form-group">
+	  Password:
+	 <div class="controls login-field">
+  <%= password_field_tag :password %>
+</div>
+  <p><p>
+	  <fieldset class="form-group">  
+		  <div class="actions pull-right">
+		  <%= f.submit 'Submit', class: 'btn btn-primary btn-about pull-right'%>
+	  </div>
+</div>
+</fieldset>
+<% end %>
+</div>
 <% end %>
