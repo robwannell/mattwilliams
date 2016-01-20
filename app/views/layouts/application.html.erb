@@ -141,7 +141,13 @@
 		</div>
 	</div>
 		
-		<div class="container">
+		<div class="container copyright">
+			  <div class="clear"></div>
+	        <p>&copy; <%= Date.today.year %> Matt Williams for Davis City Council 2016</p>
+		
+			<div class="paidforby">Paid for by Matt Williams for Davis City Council 2016</div>
+			<p>
+				
 		<% if current_user %>
 		  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %> | <%= link_to "Admin", admin_index_path %> <% if current_user.id == 1 %> || <%= link_to 'Add User', signup_path %><% end %>
 		<% else %>
