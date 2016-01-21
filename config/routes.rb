@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
  
  
+  get '/contribute' => 'contribute#index'
+
+ 
+
   resources :mail_recipients
   get 'contact/new'
 
