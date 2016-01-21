@@ -25,7 +25,14 @@
 }
 @media (max-width: 991px) {
 	
-	
+	.jumbotron-welcome h1{
+		padding-top:20px;
+		color:#fff;
+		font-size: 2em;
+	}
+	.jumbotron-welcome p{
+		font-size: 1.4em;
+	}
 	
 	.headset {
 		  display:none;
