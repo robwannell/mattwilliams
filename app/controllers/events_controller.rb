@@ -7,12 +7,16 @@ class EventsController < ApplicationController
     @things = Event.all
      @events = Event.all
      @futureevents = Event.where('start_time >= ?', Date.today).order(:start_time)
+     @title = "Calendar of Events"
+     @description = "Events and fundraisers for Matt Williams, candidate for Davis City Council 2016"
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
     @futureevents = Event.where('start_time >= ?', Date.today).order(:start_time)
+    @title = @event.name
+    @description = @event.name+". Matt Williams, candidate for Davis City Council 2016, campaign."
   end
 
   # GET /events/new

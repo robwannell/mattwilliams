@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Matt Williams for Davis City Council</title>
+    <title>Matt Williams for Davis City Council<% if @title %> | <%= @title %><% end %></title>
+  <% if @description %>
+  <meta name="description" content="<%= @description %>" />
+  <% end %>
+ 
+  <meta name="keywords" content="Matt Williams, Davis City Council, Davis, California, 2016, City Council Race, Evidence based decision making, listening to Davis, fiscal responsibility" />
+  
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">

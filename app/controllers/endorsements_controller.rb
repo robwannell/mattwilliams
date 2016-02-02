@@ -9,6 +9,8 @@ class EndorsementsController < ApplicationController
     @orgs = Endorsement.where(category: 'Organization')
     @individuals = Endorsement.where(category: 'Community Leader')
      @news = News.first
+     @title = "Endorsements for Matt"
+     @description = "About Matt Williams, candidate for Davis City Council 2016"
   end
 
   # GET /endorsements/1

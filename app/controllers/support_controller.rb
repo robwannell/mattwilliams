@@ -1,5 +1,7 @@
 class SupportController < ApplicationController
   def new
+    @title = "Support the Campaign"
+    @description = "Sign up to support Matt Williams, candidate for Davis City Council 2016. We need your help!"
     @support = Support.new
     
     

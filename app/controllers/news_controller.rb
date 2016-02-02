@@ -6,12 +6,16 @@ class NewsController < ApplicationController
   # GET /news.json
   def index
     @news = News.paginate(:page => params[:page], :per_page => 5)
+    @title = "News from the Campaign"
+    @description = "News from the Matt Williams, candidate for Davis City Council 2016, campaign."
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
     @stories = News.all
+    @title = @news.title
+    @description = @news.leader
   end
 
   # GET /news/new

@@ -1,5 +1,7 @@
 class ContactController < ApplicationController
   def new
+    @title = "Contact the Campaign"
+    @description = "Contact Matt Williams, candidate for Davis City Council 2016."
       @contact = Contact.new
        @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Matt', 'Make phone calls for Matt','Walk precincts with Matt', 'Display and/or deliver a lawn sign for Matt', 'Help Get-Out-the-Vote', 'Donate my skills another way (use comment box)']
     end
