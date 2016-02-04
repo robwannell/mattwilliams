@@ -24,8 +24,8 @@
  </div>
  <% end %>
 
-<%= image_tag 'civenergy.jpg', class: 'civenergy-img img-fluid'%>
-<p class="lead civenergy">The health of a community is measured by the involvement of it's citizens.<br/><%= link_to 'Get involved today! - find out more at Civenergy', 'http://civenergy.org', target: '_blank' %></p>
+<%= link_to (image_tag 'civenergy.jpg', class: 'civenergy-img img-fluid'),'http://civenergy.org', target: '_blank' %>
+<p class="lead civenergy">The health of a community is measured by the involvement of it's citizens.<br/><%= link_to 'Get involved today! - join the Davis dialogue at Civenergy.org', 'http://civenergy.org', target: '_blank' %></p>
 
 <% content_for :rh do %>
 
