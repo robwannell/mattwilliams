@@ -49,7 +49,7 @@ h4 {
 	color:#fff;
 	margin-bottom: 40px;
 	height:430px;
-	background-position:center center;
+	background-position:center right;
 	background-size:cover;
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("jumbo.jpg");
@@ -594,7 +594,21 @@ a.contribute:hover {
  	font-size:1em;
  	font-style:italic;
  }
+
+ .civ-img {
+ 	text-align:center;
+ 	color:#fff;
+ 	padding-top:20px;
+ 	height:300px;
+ 	background-position:center center;
+ 	background-size:cover;
+ 	text-shadow: black 0.1em 0.3em 0.3em !important;
+ 	background-image: url("civenergy.jpg");
+ }
  
+ .civ-img {
+ 	font-size:1.25em;
+ }
  .civenergy-img {
 	 width:700px;
 	 margin:0px auto;
@@ -604,4 +618,9 @@ a.contribute:hover {
 	 font-weight:350;
 	 font-size:1.4em;
 	 text-align:center;
+ }
+ 
+ h2.civenergy  {
+	 font-weight:340;
+	 font-size:1.2em;
  }
