@@ -33,7 +33,7 @@
 
 <p>
  
-  <%= simple_format(@news.content) %>
+  <%= simple_format(@news.content, {}, {:sanitize => false}) %>
 </p>
 
  
