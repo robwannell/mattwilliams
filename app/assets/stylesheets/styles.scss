@@ -49,6 +49,18 @@ h4 {
 	color:#fff;
 	margin-bottom: 40px;
 	height:430px;
+	background-position:50% 30%;
+	background-size:cover;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("jumbo2.jpg");
+}
+
+.jumbotron-coffee{
+	
+	text-align:center;
+	color:#fff;
+	margin-bottom: 40px;
+	height:430px;
 	background-position:80% 50%;
 	background-size:cover;
 	text-shadow: black 0.1em 0.3em 0.3em !important;
@@ -59,7 +71,16 @@ h4 {
 	color:#fff;
 	font-size: 3em;
 }
+
+.jumbotron-coffee h1{
+	color:#fff;
+	font-size: 2em;
+}
 .jumbotron-welcome p{
+	font-size: 1.5em;
+}
+
+.jumbotron-coffee p{
 	font-size: 2em;
 }
 
