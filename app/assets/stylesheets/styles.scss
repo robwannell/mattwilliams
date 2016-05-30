@@ -170,7 +170,7 @@ h4 {
 }
 
 .dropdown-menu {
-    width: 250px;
+    width: 320px;
     
 }
 
@@ -645,3 +645,63 @@ a.contribute:hover {
 	 font-weight:340;
 	 font-size:1.2em;
  }
+ 
+ .differences {
+	 margin-bottom:20px;
+ }
+ .comparison-table {
+ 	font-size:1.1em;
+ }
+ 
+ .table-responsive
+ {
+     overflow-x: auto;
+ }
+
+ .comparison-table .fa-check {
+ 	color:#008024;
+	font-size:1.4em;
+ 	display:block;
+ }
+
+ .comparison-table .fa-times {
+ 	color:#ff0000;
+ 	font-size:1.4em;
+ 	display:block;
+	
+ }
+
+ 
+ .ct {
+	
+ 	padding:20px;
+ 	text-align:center;
+ 	font-weight:bold;
+ 	border-bottom:1px solid #fff;
+ }
+ .ct-inc {
+ 	width:50%;
+ 	padding-left:10px;
+	font-size:1.4em;
+ }
+
+ .ct-og {
+	 background-color: #E5F7FF;
+ 	
+ 	width:15%;
+ }
+
+ .ct-ss {
+ 	background-color: #efefef;
+ 	width:15%;
+ }
+
+ .ct-header {
+ 	text-transform: uppercase;
+ 	background-color:#10243B;
+ 	color:#56C3F4;
+	
+ }
+ 
+ 
+ 

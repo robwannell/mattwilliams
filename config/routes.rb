@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
   get '/contribute' => 'contribute#index'
 
- 
+  get 'about/differences', to: 'about#differences'
 
   resources :mail_recipients
   get 'contact/new'
